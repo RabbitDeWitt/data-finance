@@ -1,5 +1,6 @@
 import React from 'react'
 import Typed from 'react-typed'
+import Button from '../button/Button'
 
 function Hero() {
   return (
@@ -18,7 +19,7 @@ function Hero() {
         <p className='md:text-2xl text-xl font-bold text-gray-500'>
           Monitor your data analytics to increase revenue for BTB, BTC, & SASS platforms.
         </p>
-        <button className='bg-green w-[200px] border border-green rounded-md font-medium my-6 mx-auto py-3 text-black hover:bg-black hover:text-green duration-300'>Get Started</button>
+        <Button text='Get Started'/>
       </div>
     </div>
   )
