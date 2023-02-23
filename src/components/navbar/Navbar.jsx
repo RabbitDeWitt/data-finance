@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='h-24 flex justify-between items-center max-w-[1240px] mx-auto px-4 text-white'>
+    <header className='h-24 flex justify-between items-center max-w-[1240px] mx-auto px-4 text-white'>
       <h1 className='w-full text-3xl font-bold text-green uppercase'>React.</h1>
       <ul className='hidden font-semibold md:flex'>
         <li className='p-4 w-max cursor-pointer'>Home</li>
@@ -20,20 +20,20 @@ const Navbar = () => {
       </ul>
 
       <div onClick={handleNav} className='block md:hidden cursor-pointer'>
-        {!nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20}/>}
+        {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20}/>}
       </div>
 
-      <div className={!nav ? 'fixed left-0 top-0 h-full w-[40%] border-r border-r-gray-900 bg-[#000300] ease-in-out duration-300' : 'fixed left-[-100%]'}>
+      <div className={nav ? 'fixed z-10 left-0 top-0 h-full w-[40%] border-r border-r-gray-900 bg-[#000300] ease-in-out duration-300' : 'fixed left-[-100%]'}>
         <h1 className='w-full text-3xl font-bold text-green px-4 leading-[96px] uppercase'>React.</h1>
         <ul className='p-4 uppercase'>
-          <li className='p-4 border-b border-b-gray-600 cursor-pointer'>Home</li>
-          <li className='p-4 border-b border-b-gray-600 cursor-pointer'>Company</li>
-          <li className='p-4 border-b border-b-gray-600 cursor-pointer'>Resources</li>
-          <li className='p-4 border-b border-b-gray-600 cursor-pointer'>About</li>
-          <li className='p-4 cursor-pointer'>Contact</li>
+          <li className='p-4 border-b border-b-gray-600 cursor-pointer hover:text-green duration-300'>Home</li>
+          <li className='p-4 border-b border-b-gray-600 cursor-pointer hover:text-green duration-300'>Company</li>
+          <li className='p-4 border-b border-b-gray-600 cursor-pointer hover:text-green duration-300'>Resources</li>
+          <li className='p-4 border-b border-b-gray-600 cursor-pointer hover:text-green duration-300'>About</li>
+          <li className='p-4 cursor-pointer hover:text-green duration-300'>Contact</li>
         </ul>
       </div>
-    </div>
+    </header>
   )
 }
 
